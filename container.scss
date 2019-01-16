@@ -1,0 +1,69 @@
+.container-area-3
+{
+    display : grid;
+  
+    // Default to
+    grid-gap: 36px;
+};
+
+.container-area-3 .container-area
+{
+    grid-column: span 1;
+};
+
+/*
+    Max width, on screens that are x wide or less, 
+*/
+@media only screen and ( max-width: $tier-4-screen )
+{
+    // Default
+    .container-area-3
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    };
+};
+
+@media only screen and (max-width: $tier-3-screen)
+{
+    .container-area-3
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    };
+};
+
+@media only screen and ( max-width: $tier-2-screen )
+{
+    .container-area-3
+    {
+        // Default to
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    };
+
+  
+// Takes the first element and spans it twice
+    .container-area-3 .container-area:first-child
+    {
+      // Default to
+        grid-column: span 2;
+    };
+};
+
+/* Mobiles */
+@media only screen and ( max-width: $tier-1-screen )
+{   
+    .container-area-3
+    {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto !important;
+
+        grid-gap: 36px !important;
+    };
+
+    .container-area-3 .container-area
+    {
+        grid-column: span 1 !important;
+    };
+};

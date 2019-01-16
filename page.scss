@@ -1,0 +1,24 @@
+body
+{
+    display : grid;
+
+    grid-template: "page_desktop_header"
+                   "page_desktop_main"
+                   "page_desktop_footer";
+    grid-gap: 16px;    
+};
+
+header
+{
+  grid-area : page_desktop_header;
+};
+
+main
+{
+  grid-area : page_desktop_main;
+};
+
+footer
+{
+  grid-area : page_desktop_footer;
+};
